@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wheducation.dao.UserDao">
+
+  	<!-- 登录用户查询 -->
+    <select id="queryUser4login" resultType="user">
+        select 
+       		* 
+       	from t_user 
+       	where 
+       	user_account = #{user_account} and user_password = #{user_password}
+    </select>
+    
+    <!-- 分页查询用户信息 -->
+    <select id="queryPageData" resultType="user">
+    	select 
+    		* 
+    		from t_user 
+    		<where>
+    			<if test="queryText != null">
+    				and user_account like concat('%', #{queryText}, '%')
+    			</if>
+    		</where>
+    	order by user_createtime desc
+    	limit #{start},#{size}
+    </select>
+    
+    <!-- 查询符合条件的用户总数 -->
+    <select id="queryUserCount" resultType="int">
+    	select
+    		 count(*) 
+    	from t_user
+    	<where>
+    		<if test="queryText != null">
+    			and user_account like concat('%', #{queryText}, '%')
+    		</if>
+    	</where>
+    </select>
+
+	<!-- 新增用户 -->
+	<insert id="insertUser">
+		insert into 
+			t_user 
+			(user_account,user_password,user_name,user_createtime)
+			value 
+			(#{user_account},#{user_password},#{user_name},#{user_createtime})
+	</insert>
+	
+	<!-- 根据id删除用户信息 -->
+	<delete id="deleteUserById" >
+		delete 
+			from 
+			t_user 
+			where id = #{id}
+	</delete>
+	
+	<!-- 根据用户id查询用户信息 -->
+	<select id="queryUserById" resultType="user">
+		select 
+			* 
+			from 
+			t_user 
+			where id = #{id}
+	</select>
+	
+	<update id="updateUser">
+		update 
+			t_user set 
+			user_account = #{user_account},
+			user_name = #{user_name} 
+			where id = #{id}
+	</update>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

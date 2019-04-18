@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>i_tongxunl</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8" transform="translate(-97.000000, -111.000000)">
+            <g id="i_tongxunl" transform="translate(97.000000, 111.000000)">
+                <rect id="Rectangle" fill="#14D1A4" x="0" y="0" width="52" height="52" rx="12"></rect>
+                <g id="Group-3" transform="translate(11.000000, 12.000000)" fill="#FFFFFF">
+                    <path d="M9.02311388,14.4039725 C7.36619387,12.9446518 6,10.6193338 6,8 C6,3.581722 7.78197703,0 12.5,0 C17.218023,0 19,3.581722 19,8 C19,10.6270635 17.6257309,12.9583734 15.9622098,14.4168693 C15.8953852,14.656348 15.875,14.9309951 15.875,15.3333333 C15.875,16.6918712 16.4493376,17.2723985 17,17.3834923 L17,17.4074942 L22.9652997,19.5019015 C24.7832813,20.140192 26,21.8569124 26,23.78369 C26,25.560009 24.560009,27 22.78369,27 L3.21631001,27 C1.43999104,27 2.17536334e-16,25.560009 0,23.78369 C-2.35981757e-16,21.8567527 1.21638639,20.139728 3.0342473,19.5006122 L8,17.754774 L8,17.7474457 C8.55066238,17.6363519 9.20943174,16.6561019 9.125,15.3333333 C9.0988888,14.9242564 9.08433908,14.6467848 9.02311388,14.4039725 Z" id="Combined-Shape"></path>
+                    <rect id="Rectangle-14" x="23" y="6" width="10" height="2" rx="1"></rect>
+                    <rect id="Rectangle-14-Copy" x="25" y="11" width="8" height="2" rx="1"></rect>
+                    <rect id="Rectangle-14-Copy-2" x="27" y="16" width="6" height="2" rx="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

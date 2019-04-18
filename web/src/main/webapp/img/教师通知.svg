@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>i_jiaoshitongzhi</title>
+    <desc>Created with Sketch.</desc>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-500.000000, -354.000000)" id="i_jiaoshitongzhi">
+            <g transform="translate(500.000000, 354.000000)">
+                <rect id="Rectangle-3" fill="#14D1A4" x="0" y="0" width="70" height="70" rx="16"></rect>
+                <g id="icons" transform="translate(16.000000, 18.000000)">
+                    <path d="M20.981712,0.170143047 C20.3604488,-0.126132336 19.6268216,-0.0301329775 19.0994679,0.41644557 L8.92263998,9.03241527 L1.80659704,8.99854866 C1.3371227,8.99690936 0.886368212,9.18571663 0.554113914,9.52317553 C0.221859616,9.86063442 0.0355111697,10.31891 0.036319219,10.796557 L5.82779945e-06,26.1944781 C-0.00120005526,26.6729558 0.184778337,27.1322567 0.51690062,27.4710255 C0.849022903,27.8097943 1.29998926,28.000185 1.77028365,28.0001834 L8.97559703,28.0001834 L19.0979548,35.583826 C19.625724,36.0302613 20.3595706,36.1260878 20.9810455,35.829722 C21.6025205,35.5333563 21.9996103,34.8982147 22,34.1999137 L22,1.79881839 C21.9993002,1.10108285 21.602563,0.466531361 20.981712,0.170143047 Z" id="形状" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <circle id="椭圆形" stroke="#FFFFFF" stroke-width="3" cx="21.5" cy="18.5" r="6.5"></circle>
+                    <rect id="矩形" fill="#FFFFFF" transform="translate(33.214102, 6.299038) rotate(-30.000000) translate(-33.214102, -6.299038) " x="29.2141016" y="4.79903811" width="8" height="3" rx="1.5"></rect>
+                    <rect id="矩形-copy-2" fill="#FFFFFF" transform="translate(33.214102, 31.299038) scale(1, -1) rotate(-30.000000) translate(-33.214102, -31.299038) " x="29.2141016" y="29.7990381" width="8" height="3" rx="1.5"></rect>
+                    <rect id="矩形-copy" fill="#FFFFFF" x="31" y="18" width="8" height="3" rx="1.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>i_tiaokechaxun</title>
+    <desc>Created with Sketch.</desc>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-1355.000000, -754.000000)">
+            <g id="i_tiaokechaxun" transform="translate(1355.000000, 754.000000)">
+                <rect id="Rectangle-3" fill="#F57169" x="0" y="0" width="70" height="70" rx="16"></rect>
+                <g id="分组-2" transform="translate(15.000000, 16.000000)">
+                    <g id="分组">
+                        <path d="M40,17.3980145 C38.3661867,16.5066031 36.4922551,16 34.5,16 C28.1487254,16 23,21.1487254 23,27.5 C23,32.1779459 25.793112,36.2035256 29.8025984,38.0000016 L4,38 C1.790861,38 -6.83488586e-15,36.209139 -7.10542736e-15,34 L-7.10542736e-15,4 C-7.37596886e-15,1.790861 1.790861,1.10639533e-14 4,1.0658141e-14 L36,1.0658141e-14 C38.209139,1.02523288e-14 40,1.790861 40,4 L40,17.3980145 Z" id="合并形状" fill="#FFFFFF"></path>
+                        <rect id="矩形" fill="#F57169" x="0" y="9" width="40" height="2"></rect>
+                        <circle id="椭圆形" fill="#F57169" cx="5" cy="5" r="1"></circle>
+                        <circle id="椭圆形-copy-3" fill="#F57169" cx="8" cy="5" r="1"></circle>
+                        <circle id="椭圆形-copy-4" fill="#F57169" cx="11" cy="5" r="1"></circle>
+                        <rect id="矩形" fill="#F57169" x="5" y="19" width="17" height="2" rx="1"></rect>
+                        <rect id="矩形-copy-2" fill="#F57169" x="5" y="25" width="15" height="2" rx="1"></rect>
+                    </g>
+                    <g id="分组-3" transform="translate(26.000000, 19.000000)">
+                        <circle id="椭圆形" stroke="#FFFFFF" stroke-width="2" cx="8.5" cy="8.5" r="8.5"></circle>
+                        <rect id="矩形" fill="#FFFFFF" transform="translate(14.979767, 18.349331) rotate(-39.000000) translate(-14.979767, -18.349331) " x="13.9797673" y="14.8493313" width="2" height="7" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
