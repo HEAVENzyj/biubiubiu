@@ -3,5 +3,6 @@
 <configuration>
     <typeAliases>
        <typeAlias type="com.wheducation.bean.User" alias="user"/>
+       <typeAlias type="com.wheducation.bean.Edubureau" alias="edubureau"/>
     </typeAliases>
 </configuration>

@@ -5,8 +5,19 @@
 						<a href="main.html"></i>工作台</a> 
 					</li>
 					<li class="list-group-item tree-closed">
+						<span>教育局 <span class="badge" style="float:right">2</span></span> 
+						<ul style="margin-top:10px;display:none;">
+							<li style="height:30px;">
+								<a href="${APP_PATH}/edubureau/index.htm"></i>教育局信息</a> 
+							</li>
+						</ul>
+					</li>
+					<li class="list-group-item tree-closed">
 						<span>组织结构 <span class="badge" style="float:right">2</span></span> 
 						<ul style="margin-top:10px;display:none;">
+							<li style="height:30px;">
+								<a href="${APP_PATH}/school/index.htm"></i> 学校管理</a> 
+							</li>
 							<li style="height:30px;">
 								<a href="auth_cert.html"></i> 学校简介</a> 
 							</li>

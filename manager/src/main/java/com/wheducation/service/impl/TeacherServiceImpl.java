@@ -13,9 +13,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TeacherServiceImpl implements TeacherService {
-
+/*
     @Autowired
-    TeacherDao teacherDao;
+    TeacherDao teacherDao;*/
 
     @Override
     public int addTeacher(Teacher teacher) {

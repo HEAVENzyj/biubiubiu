@@ -35,11 +35,11 @@
       <form class="form-signin" role="form">
         <h2 class="form-signin-heading"><i class="glyphicon glyphicon-user"></i> 用户登录</h2>
 		  <div class="form-group has-success has-feedback">
-			<input type="text" class="form-control" id="user_account" placeholder="请输入登录账号" autofocus>
+			<input type="text" class="form-control" id="user_account" value="whadmin" placeholder="请输入登录账号" autofocus>
 			<span class="glyphicon glyphicon-user form-control-feedback"></span>
 		  </div>
 		  <div class="form-group has-success has-feedback">
-			<input type="text" class="form-control" id="user_password" placeholder="请输入登录密码" style="margin-top:10px;">
+			<input type="text" class="form-control" id="user_password" value="whadmin" placeholder="请输入登录密码" style="margin-top:10px;">
 			<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 		  </div>
         <a class="btn btn-lg btn-success btn-block" onclick="dologin()" > 登录</a>

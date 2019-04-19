@@ -34,7 +34,6 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<ol class="breadcrumb">
-				  <li><a href="${APP_PATH}/main/htm">首页</a></li>
 				  <li><a href="${APP_PATH}/user/index.htm">用户信息列表</a></li>
 				  <li class="active">修改用户信息</li>
 				</ol>

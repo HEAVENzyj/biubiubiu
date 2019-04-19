@@ -49,7 +49,6 @@
   </div>
   <button id="queryBtn" type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 查询</button>
 </form>
-<button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i class=" glyphicon glyphicon-remove"></i> 删除</button>
 <button type="button" class="btn btn-primary" style="float:right;" onclick="window.location.href='${APP_PATH}/user/addUser.htm'"><i class="glyphicon glyphicon-plus"></i> 新增</button>
 <br>
  <hr style="clear:both;">
@@ -132,7 +131,6 @@
             
             //定义一个查询条件的状态变量，当有查询条件时，flag为true，当没有查询条件时，flag为false
             var flag = false;
-            
             function pageQuery(pageno){
             	var loadingIndex = -1;
             	var jsonData = {
