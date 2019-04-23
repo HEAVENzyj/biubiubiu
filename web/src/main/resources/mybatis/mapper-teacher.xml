@@ -5,6 +5,44 @@
 
 <mapper namespace="com.wheducation.dao.TeacherDao">
 
+    <!-- 查询所有老师信息 -->
+  <select id="selectLikeTeacher" resultType="teacher">
+        select
+        *
+        from t_teacher
+        <where>
+            <if test="queryText != null">
+                and tea_name like ('%', #{queryText}, '%')
+            </if>
+        </where>
+        order by tea_createtime desc
+        limit #{start},#{size}
+    </select>
+
+    <!-- 查询符合条件的老师总数 -->
+    <select id="showTeacherCount" resultType="int">
+        select
+        count(*)
+        from t_teacher
+        <where>
+            <if test="queryText != null">
+                and tea_name like concat('%', #{queryText}, '%')
+            </if>
+        </where>
+    </select>
+
+
+
+
+     <!--根据id查询老师信息-->
+    <select id="indexTeacherById" resultType="teacher">
+		select
+			*
+			from
+			t_teacher
+			where id = #{id}
+	</select>
+
 
 </mapper>
 

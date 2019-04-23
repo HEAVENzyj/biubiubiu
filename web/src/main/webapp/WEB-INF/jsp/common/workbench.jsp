@@ -61,7 +61,7 @@
 						<span>教师管理<span class="badge" style="float:right">3</span></span> 
 						<ul style="margin-top:10px;display:none;">
 							<li style="height:30px;">
-								<a href="user.html">教师信息管理</a> 
+								<a href="${APP_PATH}/teacher/index.htm">教师信息管理</a>
 							</li>
 						</ul>
 					</li>

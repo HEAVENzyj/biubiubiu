@@ -1,7 +1,5 @@
 package com.wheducation.bean;
 
-import org.joda.time.DateTime;
-
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -13,30 +11,37 @@ import java.util.Objects;
  */
 public class Teacher implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     /**
      * 老师id
      */
     private Integer id;
+
+    /**
+     * 老师编号
+     */
+    private String tea_number;
+
     /**
      * 老师姓名
      */
-    private String name;
+    private String tea_name;
     /**
      * 老师性别
      */
-    private String sex;
+    private String tea_sex;
     /**
      * 老师地址
      */
-    private String address;
+    private String tea_address;
     /**
      * 老师生日
      */
-    private Date brithday;
+    private Date tea_brithday;
     /**
      * 老师联系方式
      */
-    private String phone;
+    private String tea_phone;
     /**
      * 老师对应的学校id
      */
@@ -52,7 +57,8 @@ public class Teacher implements Serializable {
     /**
      * 该老师的信息的录入时间
      */
-    private DateTime createTime;
+    private Date tea_createTime;
+
 
     public Integer getId() {
         return id;
@@ -62,44 +68,52 @@ public class Teacher implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTea_number() {
+        return tea_number;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTea_number(String tea_number) {
+        this.tea_number = tea_number;
     }
 
-    public String getSex() {
-        return sex;
+    public String getTea_name() {
+        return tea_name;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setTea_name(String tea_name) {
+        this.tea_name = tea_name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getTea_sex() {
+        return tea_sex;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setTea_sex(String tea_sex) {
+        this.tea_sex = tea_sex;
     }
 
-    public Date getBrithday() {
-        return brithday;
+    public String getTea_address() {
+        return tea_address;
     }
 
-    public void setBrithday(Date brithday) {
-        this.brithday = brithday;
+    public void setTea_address(String tea_address) {
+        this.tea_address = tea_address;
     }
 
-    public String getPhone() {
-        return phone;
+    public Date getTea_brithday() {
+        return tea_brithday;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTea_brithday(Date tea_brithday) {
+        this.tea_brithday = tea_brithday;
+    }
+
+    public String getTea_phone() {
+        return tea_phone;
+    }
+
+    public void setTea_phone(String tea_phone) {
+        this.tea_phone = tea_phone;
     }
 
     public Integer getSchoolId() {
@@ -126,12 +140,12 @@ public class Teacher implements Serializable {
         this.classId = classId;
     }
 
-    public DateTime getCreateTime() {
-        return createTime;
+    public Date getTea_createTime() {
+        return tea_createTime;
     }
 
-    public void setCreateTime(DateTime createTime) {
-        this.createTime = createTime;
+    public void setTea_createTime(Date tea_createTime) {
+        this.tea_createTime = tea_createTime;
     }
 
     @Override
@@ -140,51 +154,42 @@ public class Teacher implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         Teacher teacher = (Teacher) o;
         return Objects.equals(id, teacher.id) &&
-                Objects.equals(name, teacher.name) &&
-                Objects.equals(sex, teacher.sex) &&
-                Objects.equals(address, teacher.address) &&
-                Objects.equals(brithday, teacher.brithday) &&
-                Objects.equals(phone, teacher.phone) &&
+                Objects.equals(tea_number, teacher.tea_number) &&
+                Objects.equals(tea_name, teacher.tea_name) &&
+                Objects.equals(tea_sex, teacher.tea_sex) &&
+                Objects.equals(tea_address, teacher.tea_address) &&
+                Objects.equals(tea_brithday, teacher.tea_brithday) &&
+                Objects.equals(tea_phone, teacher.tea_phone) &&
                 Objects.equals(schoolId, teacher.schoolId) &&
                 Objects.equals(courseId, teacher.courseId) &&
                 Objects.equals(classId, teacher.classId) &&
-                Objects.equals(createTime, teacher.createTime);
+                Objects.equals(tea_createTime, teacher.tea_createTime);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, name, sex, address, brithday, phone, schoolId, courseId, classId, createTime);
+        return Objects.hash(id, tea_number, tea_name, tea_sex, tea_address, tea_brithday, tea_phone, schoolId, courseId, classId, tea_createTime);
     }
 
     @Override
     public String toString() {
         return "Teacher{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
-                ", address='" + address + '\'' +
-                ", brithday=" + brithday +
-                ", phone='" + phone + '\'' +
+                ", tea_number='" + tea_number + '\'' +
+                ", tea_name='" + tea_name + '\'' +
+                ", tea_sex='" + tea_sex + '\'' +
+                ", tea_address='" + tea_address + '\'' +
+                ", tea_brithday=" + tea_brithday +
+                ", tea_phone='" + tea_phone + '\'' +
                 ", schoolId=" + schoolId +
                 ", courseId=" + courseId +
                 ", classId=" + classId +
-                ", createTime=" + createTime +
+                ", tea_createTime=" + tea_createTime +
                 '}';
     }
 
-    public Teacher(Integer id, String name, String sex, String address, Date brithday, String phone, Integer schoolId, Integer courseId, Integer classId, DateTime createTime) {
-        this.id = id;
-        this.name = name;
-        this.sex = sex;
-        this.address = address;
-        this.brithday = brithday;
-        this.phone = phone;
-        this.schoolId = schoolId;
-        this.courseId = courseId;
-        this.classId = classId;
-        this.createTime = createTime;
-    }
+
 
     public Teacher(){
 

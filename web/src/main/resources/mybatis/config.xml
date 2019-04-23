@@ -4,5 +4,6 @@
     <typeAliases>
        <typeAlias type="com.wheducation.bean.User" alias="user"/>
        <typeAlias type="com.wheducation.bean.Edubureau" alias="edubureau"/>
+        <typeAlias type="com.wheducation.bean.Teacher" alias="teacher"/>
     </typeAliases>
 </configuration>
