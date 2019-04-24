@@ -5,6 +5,15 @@
 
 <mapper namespace="com.wheducation.dao.TeacherDao">
 
+    <!-- 新增教师信息 -->
+    <insert id="insertTeacher">
+    	insert into
+    		t_teacher
+    		(tea_number,tea_name,tea_sex,tea_address,tea_brithday,tea_phone,sch_id,cou_id,cla_id,tea_createTime)
+    		value
+    		(#{tea_number},#{tea_name},#{tea_sex},#{tea_address},#{tea_brithday},#{tea_phone},#{sch_id},#{cou_id},#{cla_id},#{tea_createTime})
+    </insert>
+
     <!-- 查询所有老师信息 -->
   <select id="selectLikeTeacher" resultType="teacher">
         select

@@ -46,27 +46,27 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师姓名</label>
-                            <input type="text" class="form-control" id="tea_name " placeholder="请输入教师姓名">
+                            <input type="text" class="form-control" id="tea_name" placeholder="请输入教师姓名">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师性别</label>
-                            <input type="text" class="form-control" id="tea_sex " placeholder="请输入教师性别">
+                            <input type="text" class="form-control" id="tea_sex" placeholder="请输入教师性别">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师住址</label>
-                            <input type="text" class="form-control" id="tea_address " placeholder="请输入教师住址">
+                            <input type="text" class="form-control" id="tea_address" placeholder="请输入教师住址">
                         </div>
-                        <div class="form-group">
+                        <%--<div class="form-group">
                             <label for="exampleInputPassword1">教师生日</label>
-                            <input type="text" class="form-control" id="tea_brithday " placeholder="请输入教师生日">
-                        </div>
+                            <input type="text" class="form-control" id="tea_brithday" placeholder="请输入教师生日">
+                        </div>--%>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师电话</label>
-                            <input type="text" class="form-control" id="tea_phone " placeholder="请输入教师电话">
+                            <input type="text" class="form-control" id="tea_phone" placeholder="请输入教师电话">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师学校</label>
-                            <input type="text" class="form-control" id="sch_id " placeholder="请输入教师学校">
+                            <input type="text" class="form-control" id="sch_id" placeholder="请输入教师学校">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师课程</label>
@@ -76,10 +76,10 @@
                             <label for="exampleInputPassword1">教师班级</label>
                             <input type="text" class="form-control" id="cla_id" placeholder="请输入教师班级">
                         </div>
-                        <div class="form-group">
+                        <%--<div class="form-group">
                             <label for="exampleInputPassword1">注册时间</label>
-                            <input type="text" class="form-control" id="tea_createtime" placeholder="请输入注册时间">
-                        </div>
+                            <input type="text" class="form-control" id="tea_createTime" placeholder="请输入注册时间">
+                        </div>--%>
                         <button id="insertBtn" type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 新增</button>
                         <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
                     </form>
@@ -137,13 +137,13 @@
             });
             return;
         }
-        var tea_brithday = $("#tea_brithday");
+       /* var tea_brithday = $("#tea_brithday");
         if(tea_brithday.val() == ""){
             layer.msg("请输入教师生日", {time:1000, icon:5, shift:6}, function(){
                 tea_sex.focus();
             });
             return;
-        }
+        }*/
         var tea_phone = $("#tea_phone");
         if(tea_phone.val() == ""){
             layer.msg("请输入教师电话", {time:1000, icon:5, shift:6}, function(){
@@ -170,27 +170,30 @@
                 cla_id.focus();
             });
             return;
-        }var tea_createtime = $("#tea_createtime");
-        if(tea_createtime.val() == ""){
+        }
+       /* var tea_createTime = $("#tea_createTime");
+        if(tea_createTime.val() == ""){
             layer.msg("请输入注册时间", {time:1000, icon:5, shift:6}, function(){
-                tea_createtime.focus();
+                tea_createTime.focus();
             })
             return;
-        }
+        }*/
 
         var loadingIndex = -1;
         $.ajax({
             type  : "POST",
-            url   : "${APP_PATH}/teacher/addTeacher.do",
+            url   : "${APP_PATH}/teacher/insertTeacher.do",
             data  : {
-                tea_number : tea_number.val(),
-                tea_name : tea_name.val(),
-                tea_sex : tea_sex.val(),
-                tea_phone : tea_phone.val(),
-                sch_id : sch_id.val(),
-                cou_id : cou_id.val(),
-                cla_id : cla_id.val(),
-                tea_createtime : tea_createtime.val()
+                tea_number : $("#tea_number").val(),
+                tea_name : $("#tea_name").val(),
+                tea_sex : $("#tea_sex").val(),
+                tea_address : $("#tea_address").val(),
+                /*tea_brithday : $("#tea_brithday").val(),*/
+                tea_phone :$("#tea_phone").val(),
+                sch_id : $("#sch_id").val(),
+                cou_id : $("#cou_id").val(),
+                cla_id : $("#cla_id").val()
+                /*tea_createTime : tea_createTime.val()*/
             },
             beforeSend : function(){
                 loadingIndex = layer.msg('处理中', {icon: 16});
@@ -203,16 +206,7 @@
                 }
             }
         })
-
-
-
-
     });
-
-
-
-
-
 </script>
 </body>
 </html>

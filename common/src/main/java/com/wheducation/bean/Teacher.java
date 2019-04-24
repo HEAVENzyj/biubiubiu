@@ -43,22 +43,21 @@ public class Teacher implements Serializable {
      */
     private String tea_phone;
     /**
-     * 老师对应的学校id
+     * 老师对应的学校idi
      */
-    private Integer schoolId;
+    private Integer sch_id;
     /**
      * 老师的课程id
      */
-    private Integer courseId;
+    private Integer cou_id;
     /**
      * 老师对应的班级id
      */
-    private Integer classId;
+    private Integer cla_id;
     /**
      * 该老师的信息的录入时间
      */
     private Date tea_createTime;
-
 
     public Integer getId() {
         return id;
@@ -116,28 +115,28 @@ public class Teacher implements Serializable {
         this.tea_phone = tea_phone;
     }
 
-    public Integer getSchoolId() {
-        return schoolId;
+    public Integer getSch_id() {
+        return sch_id;
     }
 
-    public void setSchoolId(Integer schoolId) {
-        this.schoolId = schoolId;
+    public void setSch_id(Integer sch_id) {
+        this.sch_id = sch_id;
     }
 
-    public Integer getCourseId() {
-        return courseId;
+    public Integer getCou_id() {
+        return cou_id;
     }
 
-    public void setCourseId(Integer courseId) {
-        this.courseId = courseId;
+    public void setCou_id(Integer cou_id) {
+        this.cou_id = cou_id;
     }
 
-    public Integer getClassId() {
-        return classId;
+    public Integer getCla_id() {
+        return cla_id;
     }
 
-    public void setClassId(Integer classId) {
-        this.classId = classId;
+    public void setCla_id(Integer cla_id) {
+        this.cla_id = cla_id;
     }
 
     public Date getTea_createTime() {
@@ -160,16 +159,16 @@ public class Teacher implements Serializable {
                 Objects.equals(tea_address, teacher.tea_address) &&
                 Objects.equals(tea_brithday, teacher.tea_brithday) &&
                 Objects.equals(tea_phone, teacher.tea_phone) &&
-                Objects.equals(schoolId, teacher.schoolId) &&
-                Objects.equals(courseId, teacher.courseId) &&
-                Objects.equals(classId, teacher.classId) &&
+                Objects.equals(sch_id, teacher.sch_id) &&
+                Objects.equals(cou_id, teacher.cou_id) &&
+                Objects.equals(cla_id, teacher.cla_id) &&
                 Objects.equals(tea_createTime, teacher.tea_createTime);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, tea_number, tea_name, tea_sex, tea_address, tea_brithday, tea_phone, schoolId, courseId, classId, tea_createTime);
+        return Objects.hash(id, tea_number, tea_name, tea_sex, tea_address, tea_brithday, tea_phone, sch_id, cou_id, cla_id, tea_createTime);
     }
 
     @Override
@@ -182,14 +181,12 @@ public class Teacher implements Serializable {
                 ", tea_address='" + tea_address + '\'' +
                 ", tea_brithday=" + tea_brithday +
                 ", tea_phone='" + tea_phone + '\'' +
-                ", schoolId=" + schoolId +
-                ", courseId=" + courseId +
-                ", classId=" + classId +
+                ", sch_id=" + sch_id +
+                ", cou_id=" + cou_id +
+                ", cla_id=" + cla_id +
                 ", tea_createTime=" + tea_createTime +
                 '}';
     }
-
-
 
     public Teacher(){
 
