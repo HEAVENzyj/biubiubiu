@@ -2,9 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html lang="GB18030">
+<html lang="zh-CN">
   <head>
-    <meta charset="GB18030">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -100,6 +100,7 @@
 						}
 					}
 				});
+			    
 			    <c:if test="${empty param.pageno}">
 			  	  pageQuery(1);
 			    </c:if>

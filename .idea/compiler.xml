@@ -12,8 +12,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="common" target="7" />
-      <module name="manager" target="6" />
+      <module name="common" target="1.5" />
+      <module name="manager" target="1.5" />
       <module name="parent" target="1.5" />
       <module name="web" target="1.5" />
     </bytecodeTargetLevel>

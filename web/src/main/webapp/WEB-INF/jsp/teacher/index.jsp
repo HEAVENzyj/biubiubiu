@@ -19,7 +19,7 @@
             cursor:pointer;
         }
         table tbody tr:nth-child(odd){background:#F4F4F4;}
-        table tbody td:nth-child(even){color:#C00;}
+        table tbody td:nth-child(even){color:#CC3300;}
     </style>
 </head>
 
@@ -37,7 +37,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 老师信息列表</h3>
+                    <h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 教师信息列表</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-inline" role="form" style="float:left;">

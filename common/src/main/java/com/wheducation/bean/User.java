@@ -10,7 +10,16 @@ public class User implements Serializable{
 	private String user_account;
 	private String user_password;
 	private String user_name;
+	private int sch_id;
 	private Date user_createtime;
+	
+	
+	public int getSch_id() {
+		return sch_id;
+	}
+	public void setSch_id(int sch_id) {
+		this.sch_id = sch_id;
+	}
 	public int getId() {
 		return id;
 	}
@@ -47,7 +56,7 @@ public class User implements Serializable{
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", user_account=" + user_account + ", user_password=" + user_password + ", user_name="
-				+ user_name + ", user_createtime=" + user_createtime + "]";
+				+ user_name + ", sch_id=" + sch_id + ", user_createtime=" + user_createtime + "]";
 	}
 	
 	
