@@ -56,18 +56,18 @@
                             <label for="exampleInputPassword1">教师住址</label>
                             <input type="text" class="form-control" id="tea_address" placeholder="请输入教师住址">
                         </div>
-                       <%-- <div class="form-group">
+                        <div class="form-group">
                             <label for="exampleInputPassword1">教师生日</label>
-                            <input type="text" class="form-control" id="tea_brithday" placeholder="请输入教师生日">
-                        </div>--%>
+                            <input type="date" class="form-control" id="tea_brithday" placeholder="请输入教师生日">
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师电话</label>
                             <input type="text" class="form-control" id="tea_phone" placeholder="请输入教师电话">
                         </div>
-                        <div class="form-group">
+                        <%--<div class="form-group">
                             <label for="exampleInputPassword1">教师学校</label>
                             <input type="text" class="form-control" id="sch_id" placeholder="请输入教师学校">
-                        </div>
+                        </div>--%>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师课程</label>
                             <input type="text" class="form-control" id="cou_id" placeholder="请输入教师课程">
@@ -137,13 +137,13 @@
             });
             return;
         }
-       /* var tea_brithday = $("#tea_brithday");
+        var tea_brithday = $("#tea_brithday");
         if(tea_brithday.val() == ""){
             layer.msg("请输入教师生日", {time:1000, icon:5, shift:6}, function(){
                 tea_brithday.focus();
             });
             return;
-        }*/
+        }
         var tea_phone = $("#tea_phone");
         if(tea_phone.val() == ""){
             layer.msg("请输入教师电话", {time:1000, icon:5, shift:6}, function(){
@@ -151,8 +151,8 @@
             });
             return;
         }
-        var sch_id = $("#sch_id");
-       /* if(sch_id.val() == ""){
+        /* var sch_id = $("#sch_id");
+       if(sch_id.val() == ""){
             layer.msg("请输入教师学校", {time:1000, icon:5, shift:6}, function(){
                 sch_id.focus();
             });
@@ -178,7 +178,7 @@
             })
             return;
         }*/
-
+       alert($("#tea_brithday").val());
         var loadingIndex = -1;
         $.ajax({
             type  : "POST",
@@ -188,13 +188,14 @@
                 tea_name : $("#tea_name").val(),
                 tea_sex : $("#tea_sex").val(),
                 tea_address : $("#tea_address").val(),
-                /*tea_brithday : $("#tea_brithday").val(),*/
+                tea_brithday : $("#tea_brithday").val(),
                 tea_phone :$("#tea_phone").val(),
-                sch_id : $("#sch_id").val(),
+                sch_id :"${loginUser.sch_id}",
                 cou_id : $("#cou_id").val(),
                 cla_id : $("#cla_id").val()
                 /*tea_createTime : tea_createTime.val()*/
             },
+
             beforeSend : function(){
                 loadingIndex = layer.msg('处理中', {icon: 16});
             },

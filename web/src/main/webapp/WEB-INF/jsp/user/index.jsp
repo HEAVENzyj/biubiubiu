@@ -136,7 +136,7 @@
             	var loadingIndex = -1;
             	var jsonData = {
             			pageno  :  pageno,
-            			pagesize : 3
+            			pagesize : 10
             	}
             	if(flag){
             		//动态添加json对象属性

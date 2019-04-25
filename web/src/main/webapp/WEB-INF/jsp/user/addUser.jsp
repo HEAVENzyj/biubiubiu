@@ -48,6 +48,12 @@
 					<label for="exampleInputPassword1">用户名称</label>
 					<input type="text" class="form-control" id="user_name" placeholder="请输入用户名称">
 				  </div>
+				  <div class="form-group">
+					<label for="exampleInputPassword1">隶属学校</label>
+					<select id="sch_list" name="学校列表">
+						<!-- <option value="volvo">Volvo</option> -->
+					</select>
+				  </div>
 				  <button id="insertBtn" type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 新增</button>
 				  <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
 				</form>
@@ -73,6 +79,26 @@
 						}
 					}
 				});
+			    
+			    var loadingIndex = -1;
+			    $.ajax({
+			    	type   : "POST",
+			    	url    : "${APP_PATH}/school/querySchoollist.do",
+			    	data   : {
+			    		id : "${loginUser.user_name}"
+			    	},
+			    	beforeSend  :function(){
+			    		loadingIndex = layer.msg('处理中', {icon: 16});
+			    	},
+			    	success  : function(result){
+			    		var schList = result.data;
+			    		var schContent = "";
+			    		$.each(schList,function(i,school){
+			    			schContent = schContent + '<option value='+school.id+'>'+school.sch_name+'</option>';
+			    		});
+			    		$("#sch_list").html(schContent);
+			    	}
+			    })
             });
             
             $("#insertBtn").click(function(){
@@ -97,7 +123,8 @@
             		url   : "${APP_PATH}/user/insertUser.do",
             		data  : {
             			user_account : user_account.val(),
-            			user_name : user_name.val()
+            			user_name : user_name.val(),
+            			sch_id  : $("#sch_list").val()
             		},
             		beforeSend : function(){
             			loadingIndex = layer.msg('处理中', {icon: 16});

@@ -16,7 +16,7 @@
 						<span>学校列表 <span class="badge" style="float:right">2</span></span> 
 						<ul style="margin-top:10px;display:none;">
 							<li style="height:30px;">
-								<a href="${APP_PATH}/school/index.htm"></i>学校列表</a> 
+								<a href="${APP_PATH}/school/sch_list.htm"></i>学校列表</a> 
 							</li>
 						</ul>
 					</li>
@@ -24,7 +24,7 @@
 						<span>学校管理<span class="badge" style="float:right">4</span></span> 
 						<ul style="margin-top:10px;display:none;">
 							<li style="height:30px;">
-								<a href="${APP_PATH}/school/desSchool.htm"></i>学校简介</a> 
+								<a href="${APP_PATH}/school/index.htm"></i>学校简介</a> 
 							</li>
 							<li style="height:30px;">
 								<a href="*"></i>组织结构</a> 

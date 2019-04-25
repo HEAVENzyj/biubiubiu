@@ -9,10 +9,27 @@
     <insert id="insertTeacher">
     	insert into
     		t_teacher
-    		(tea_number,tea_name,tea_sex,tea_address,tea_phone,sch_id,cou_id,cla_id,tea_createTime)
+    		(tea_number,tea_name,tea_sex,tea_address,tea_brithday,tea_phone,sch_id,cou_id,cla_id,tea_createTime)
     		value
-    		(#{tea_number},#{tea_name},#{tea_sex},#{tea_address},#{tea_phone},#{sch_id},#{cou_id},#{cla_id},#{tea_createTime})
+    		(#{tea_number},#{tea_name},#{tea_sex},#{tea_address},#{tea_brithday},#{tea_phone},#{sch_id},#{cou_id},#{cla_id},#{tea_createTime})
     </insert>
+
+    <!--修改教师信息-->
+    <update id="updateTeacher">
+    	update
+    		t_teacher
+    		set tea_number = #{tea_number},
+    		tea_name = #{tea_name},
+            tea_sex = #{tea_sex},
+            tea_address = #{tea_address},
+            tea_brithday = #{tea_brithday},
+            tea_phone = #{tea_phone},
+            sch_id = #{sch_id},
+            cou_id = #{cou_id},
+            cla_id = #{cla_id},
+            tea_createTime = #{tea_createTime}
+    		where id = #{id}
+    </update>
 
     <!-- 查询所有老师信息 -->
   <select id="selectLikeTeacher" resultType="teacher">
@@ -22,6 +39,9 @@
         <where>
             <if test="queryText != null">
                 and tea_name like ('%', #{queryText}, '%')
+            </if>
+            <if test="sch_id != 0">
+                and sch_id = #{sch_id}
             </if>
         </where>
         order by tea_createtime desc
@@ -36,6 +56,9 @@
         <where>
             <if test="queryText != null">
                 and tea_name like concat('%', #{queryText}, '%')
+            </if>
+            <if test="sch_id != 0">
+                and sch_id = #{sch_id}
             </if>
         </where>
     </select>

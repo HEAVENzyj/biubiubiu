@@ -64,6 +64,7 @@
                                 <th>姓名</th>
                                 <th>性别</th>
                                 <th>住址</th>
+                                <th>生日</th>
                                 <th>电话</th>
                                 <th width="100">操作</th>
                             </tr>
@@ -148,7 +149,8 @@
         var loadingIndex = -1;
         var jsonData = {
             pageno : pageno,
-            pagesize :10
+            pagesize :10,
+            sch_id : "${loginUser.sch_id}"
         }
         jsonData["queryText"] = $("#queryText").val();
 
@@ -172,10 +174,11 @@
                         pageContent = pageContent + '  <td>'+teacher.tea_name+'</td>';
                         pageContent = pageContent + '  <td>'+teacher.tea_sex+'</td>';
                         pageContent = pageContent + '  <td>'+teacher.tea_address+'</td>';
+                        pageContent = pageContent + '  <td>'+teacher.tea_brithday+'</td>';
                         pageContent = pageContent + '  <td>'+teacher.tea_phone+'</td>';
                         pageContent = pageContent + '  <td>';
                         pageContent = pageContent + '      <button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>';
-                        pageContent = pageContent + '      <button type="button" class="btn btn-primary btn-xs" onclick=updateTeacherById('+teacher.id+','+pageno+')><i class=" glyphicon glyphicon-pencil"></i></button>';
+                        pageContent = pageContent + '      <button type="button" class="btn btn-primary btn-xs" onclick=editTeacherById('+teacher.id+','+pageno+')><i class=" glyphicon glyphicon-pencil"></i></button>';
                         pageContent = pageContent + '	  <button type="button" class="btn btn-danger btn-xs" onclick=deleteTeacherById('+teacher.id+',\''+teacher.tea_name+'\')><i class=" glyphicon glyphicon-remove"></i></button>';
                         pageContent = pageContent + '  </td>';
                         pageContent = pageContent + '</tr>';
@@ -206,9 +209,9 @@
     }
 
    //修改老师信息
-    //function editTeacherById(id,pageno){
-      //  window.location.href = "${APP_PATH}/teacher/updateTeacher.do?id="+id+"&pageno="+pageno
-    //}
+    function editTeacherById(id,pageno){
+        window.location.href = "${APP_PATH}/teacher/editTeacher.do?id="+id+"&pageno="+pageno
+    }
 
     //根据ID删除老师
     function deleteTeacherById(id,tea_name){
