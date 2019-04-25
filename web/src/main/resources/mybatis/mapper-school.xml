@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wheducation.dao.SchoolDao">
+
+
+	<select id="querySchoollist" resultType="school">
+		select * from t_school order by sch_createtime desc
+	</select>
+
+	<select id="querySchoolDesc" resultType="school">
+		select * from t_school where id = #{id}
+	</select>
+
+
+  <select id="queryPageData" resultType="school">
+  	select 
+  		* 
+  	from t_school 
+	  	<where>
+    			<if test="queryText != null">
+    				and sch_name like concat('%', #{queryText}, '%')
+    			</if>
+    	</where>
+    order by sch_createtime desc
+  	limit #{start},#{size}
+  </select>
+  
+  <select id="querySchoolCount" resultType="int">
+  		select 
+  			count(*) 
+  		from t_school
+  		<where>
+    		<if test="queryText != null">
+    			and sch_name like concat('%', #{queryText}, '%')
+    		</if>
+    	</where>
+  </select>
+  
+  <delete id="deleteSchoolById">
+  		delete 
+  			from t_school 
+  			where id = #{id}
+  </delete>
+  
+  <insert id="insertSchool">
+  		insert into 
+  			t_school 
+  			(sch_name,sch_number,sch_img,sch_type,sch_motto,sch_address,sch_desc,eb_id,sch_createtime) 
+  			value 
+  			(#{sch_name},#{sch_number},#{sch_img},#{sch_type},#{sch_motto},#{sch_address},#{sch_desc},#{eb_id},#{sch_createtime})
+  </insert>
+  
+  <select id="querySchoolById" resultType="school">
+  		select * from t_school where id = #{id}
+  </select>
+  
+  <update id="updateSchool">
+  		update t_school set 
+  				sch_name=#{sch_name},
+  				sch_number=#{sch_number},
+  				sch_img=#{sch_img},
+  				sch_type=#{sch_type},
+  				sch_motto=#{sch_motto},
+  				sch_address=#{sch_address},
+  				sch_desc=#{sch_desc}
+  				where id=#{id}
+  </update>
+  
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

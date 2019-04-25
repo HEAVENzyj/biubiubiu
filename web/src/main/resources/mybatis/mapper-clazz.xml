@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wheducation.dao.ClazzDao">
+
+
+    
+    <!-- 分页查询班级信息 -->
+    <select id="queryPageData" resultType="clazz">
+    	select 
+    		* 
+    		from t_clazz
+    		<where>
+    			<if test="queryText != null">
+    				and cla_name like concat('%', #{queryText}, '%')
+    			</if>
+	    		<if test="sch_id != 0">
+	    			and sch_id = #{sch_id} 
+	    		</if>
+    		</where>
+    	order by cla_createtime desc
+    	limit #{start},#{size}
+    </select>
+    
+    <!-- 查询符合条件的班级总数 -->
+    <select id="queryClazzCount" resultType="int">
+    	select
+    		 count(*) 
+    	from t_clazz
+    	<where>
+    		<if test="queryText != null">
+    			and cla_name like concat('%', #{queryText}, '%')
+    		</if>
+    		<if test="sch_id != 0">
+	    			and sch_id = #{sch_id} 
+	    	</if>
+    	</where>
+    </select>
+
+	<!-- 新增班级信息 -->
+	<insert id="insertClazz">
+		insert into 
+			t_clazz
+			(cla_name,sch_id,cla_createtime)
+			value 
+			(#{cla_name},#{sch_id},#{cla_createtime})
+	</insert>
+	
+	<!-- 根据id删除班级信息 -->
+	<delete id="deleteClazzById" >
+		delete 
+			from 
+			t_clazz
+			where id = #{id}
+	</delete>
+	
+	<!-- 根据用户id查询班级信息-->
+	<select id="queryClazzById" resultType="clazz">
+		select 
+			* 
+			from 
+			t_clazz
+			where id = #{id}
+	</select>
+	
+   	<update id="updateClazz">
+		update 
+			t_clazz set 
+			cla_name = #{cla_name}
+			where id = #{id}
+	</update>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

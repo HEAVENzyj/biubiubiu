@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wheducation.dao.EdubureauDao">
+
+
+	<select id="queryEblist" resultType="edubureau">
+		select * from t_edu_bureau
+	</select>
+
+
+
+    <!-- 分页查询教育局信息 -->
+    <select id="queryPageData" resultType="edubureau">
+    	select 
+    		* 
+    		from t_edu_bureau 
+    		<where>
+    			<if test="queryText != null">
+    				and eb_name like concat('%', #{queryText}, '%')
+    			</if>
+    		</where>
+    	order by eb_createtime desc
+    	limit #{start},#{size}
+    </select>
+    
+    <!-- 查询符合条件的教育局总数 -->
+    <select id="queryEdubureauCount" resultType="int">
+    	select
+    		 count(*) 
+    	from t_edu_bureau
+    	<where>
+    			<if test="queryText != null">
+    				and eb_name like concat('%', #{queryText}, '%')
+    			</if>
+    	</where>
+    </select>
+    
+    <!-- 根据ID删除教育局信息 -->
+    <delete id="deleteEdubureauById">
+    	delete from t_edu_bureau where id = #{id}
+    </delete>
+    
+    <!-- 新增教育局信息 -->
+    <insert id="insertEdubureau">
+    	insert into 
+    		t_edu_bureau 
+    		(eb_name,eb_address,eb_createtime) 
+    		value 
+    		(#{eb_name},#{eb_address},#{eb_createtime})
+    </insert>
+    
+    <select id="queryEdubureauById" resultType="edubureau">
+    	select 
+    		*
+    		from 
+    		t_edu_bureau 
+    		where id = #{id}
+    </select>
+    
+    <update id="updateEdubureau">
+    	update 
+    		t_edu_bureau 
+    		set eb_name = #{eb_name},
+    		eb_address = #{eb_address}
+    		where id = #{id}
+    </update>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

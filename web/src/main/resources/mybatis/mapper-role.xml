@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wheducation.dao.RoleDao">
+
+
+    
+    <!-- 分页查询用户信息 -->
+    <select id="queryPageData" resultType="role">
+    	select 
+    		* 
+    		from t_role
+    		<where>
+    			<if test="queryText != null">
+    				and role_name like concat('%', #{queryText},'%')
+    			</if>
+    		</where>
+    	order by role_createtime 
+    	limit #{start},#{size}
+    </select>
+    
+    <!-- 查询符合条件的用户总数 -->
+    <select id="queryRoleCount" resultType="int">
+    	select
+    		 count(*) 
+    	from t_role
+    	<where>
+    		<if test="queryText != null">
+    			and role_name like concat('%', #{queryText}, '%')
+    		</if>
+    	</where>
+    </select>
+
+	<!-- 新增用户 -->
+	<insert id="insertRole">
+		insert into 
+			t_role 
+			(role_name,role_desc,role_createtime)
+			value 
+			(#{role_name},#{role_desc},#{role_createtime})
+	</insert>
+	
+	<!-- 根据id删除用户信息 -->
+	<delete id="deleteRoleById" >
+		delete 
+			from 
+			t_role 
+			where id = #{id}
+	</delete>
+	
+	<!-- 根据用户id查询用户信息-->
+	<select id="queryRoleById" resultType="role">
+		select 
+			* 
+			from 
+			t_role 
+			where id = #{id}
+	</select>
+	
+ 	<update id="updateRole">
+		update 
+			t_role set 
+			role_name = #{role_name},
+			role_desc = #{role_desc}
+			where id = #{id}
+	</update> 
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wheducation.dao.CourseDao">
+
+
+    
+    <!-- 分页查询课程信息 -->
+    <select id="queryPageData" resultType="course">
+    	select 
+    		* 
+    		from t_course
+    		<where>
+    			<if test="queryText != null">
+    				and cou_name like concat('%', #{queryText}, '%')
+    			</if>
+    			<if test="sch_id != 0">
+	    			and sch_id = #{sch_id} 
+	    		</if>
+    		</where>
+    	order by cou_createtime desc
+    	limit #{start},#{size}
+    </select>
+    
+    <!-- 查询符合条件的课程总数 -->
+    <select id="queryCourseCount" resultType="int">
+    	select
+    		 count(*) 
+    	from t_course
+    	<where>
+    		<if test="queryText != null">
+    			and cou_name like concat('%', #{queryText}, '%')
+    		</if>
+    		<if test="sch_id != 0">
+	    		and sch_id = #{sch_id} 
+	    	</if>
+    	</where>
+    </select>
+
+	<!-- 新增课程信息 -->
+	<insert id="insertCourse">
+		insert into 
+			t_course
+			(cou_name,sch_id,cou_createtime)
+			value 
+			(#{cou_name},#{sch_id},#{cou_createtime})
+	</insert>
+	
+	<!-- 根据id删除课程信息 -->
+	<delete id="deleteCourseById" >
+		delete 
+			from 
+			t_course 
+			where id = #{id}
+	</delete>
+	
+	<!-- 根据id查询课程信息-->
+	<select id="queryCourseById" resultType="course">
+		select 
+			* 
+			from 
+			t_course 
+			where id = #{id}
+	</select>
+	
+	<!-- 修改课程信息 -->
+  	<update id="updateCourse">
+		update 
+			t_course set 
+			cou_name = #{cou_name}
+			where id = #{id}
+	</update> 
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
