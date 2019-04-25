@@ -1,5 +1,8 @@
 package com.wheducation.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -26,18 +29,17 @@ public class Teacher implements Serializable {
      * 老师姓名
      */
     private String tea_name;
+
     /**
      * 老师性别
      */
     private String tea_sex;
+
     /**
      * 老师地址
      */
     private String tea_address;
-    /**
-     * 老师生日
-     */
-    private Date tea_brithday;
+
     /**
      * 老师联系方式
      */
@@ -99,14 +101,6 @@ public class Teacher implements Serializable {
         this.tea_address = tea_address;
     }
 
-    public Date getTea_brithday() {
-        return tea_brithday;
-    }
-
-    public void setTea_brithday(Date tea_brithday) {
-        this.tea_brithday = tea_brithday;
-    }
-
     public String getTea_phone() {
         return tea_phone;
     }
@@ -157,7 +151,6 @@ public class Teacher implements Serializable {
                 Objects.equals(tea_name, teacher.tea_name) &&
                 Objects.equals(tea_sex, teacher.tea_sex) &&
                 Objects.equals(tea_address, teacher.tea_address) &&
-                Objects.equals(tea_brithday, teacher.tea_brithday) &&
                 Objects.equals(tea_phone, teacher.tea_phone) &&
                 Objects.equals(sch_id, teacher.sch_id) &&
                 Objects.equals(cou_id, teacher.cou_id) &&
@@ -168,7 +161,7 @@ public class Teacher implements Serializable {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, tea_number, tea_name, tea_sex, tea_address, tea_brithday, tea_phone, sch_id, cou_id, cla_id, tea_createTime);
+        return Objects.hash(id, tea_number, tea_name, tea_sex, tea_address, tea_phone, sch_id, cou_id, cla_id, tea_createTime);
     }
 
     @Override
@@ -179,7 +172,6 @@ public class Teacher implements Serializable {
                 ", tea_name='" + tea_name + '\'' +
                 ", tea_sex='" + tea_sex + '\'' +
                 ", tea_address='" + tea_address + '\'' +
-                ", tea_brithday=" + tea_brithday +
                 ", tea_phone='" + tea_phone + '\'' +
                 ", sch_id=" + sch_id +
                 ", cou_id=" + cou_id +

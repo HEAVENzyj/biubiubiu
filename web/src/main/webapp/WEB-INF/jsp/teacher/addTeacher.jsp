@@ -56,7 +56,7 @@
                             <label for="exampleInputPassword1">教师住址</label>
                             <input type="text" class="form-control" id="tea_address" placeholder="请输入教师住址">
                         </div>
-                        <%--<div class="form-group">
+                       <%-- <div class="form-group">
                             <label for="exampleInputPassword1">教师生日</label>
                             <input type="text" class="form-control" id="tea_brithday" placeholder="请输入教师生日">
                         </div>--%>
@@ -140,7 +140,7 @@
        /* var tea_brithday = $("#tea_brithday");
         if(tea_brithday.val() == ""){
             layer.msg("请输入教师生日", {time:1000, icon:5, shift:6}, function(){
-                tea_sex.focus();
+                tea_brithday.focus();
             });
             return;
         }*/
@@ -152,12 +152,12 @@
             return;
         }
         var sch_id = $("#sch_id");
-        if(sch_id.val() == ""){
+       /* if(sch_id.val() == ""){
             layer.msg("请输入教师学校", {time:1000, icon:5, shift:6}, function(){
                 sch_id.focus();
             });
             return;
-        }
+        }*/
         var cou_id = $("#cou_id");
         if(cou_id.val() == ""){
             layer.msg("请输入教师课程", {time:1000, icon:5, shift:6}, function(){

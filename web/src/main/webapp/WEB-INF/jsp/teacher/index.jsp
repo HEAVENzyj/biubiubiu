@@ -64,7 +64,6 @@
                                 <th>姓名</th>
                                 <th>性别</th>
                                 <th>住址</th>
-                                <th>生日</th>
                                 <th>电话</th>
                                 <th width="100">操作</th>
                             </tr>
@@ -173,7 +172,6 @@
                         pageContent = pageContent + '  <td>'+teacher.tea_name+'</td>';
                         pageContent = pageContent + '  <td>'+teacher.tea_sex+'</td>';
                         pageContent = pageContent + '  <td>'+teacher.tea_address+'</td>';
-                        pageContent = pageContent + '  <td>'+teacher.tea_brithday+'</td>';
                         pageContent = pageContent + '  <td>'+teacher.tea_phone+'</td>';
                         pageContent = pageContent + '  <td>';
                         pageContent = pageContent + '      <button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>';
