@@ -149,7 +149,7 @@
         var loadingIndex = -1;
         var jsonData = {
             pageno : pageno,
-            pagesize :10,
+            pagesize :5,
             sch_id : "${loginUser.sch_id}"
         }
         jsonData["queryText"] = $("#queryText").val();
@@ -179,7 +179,7 @@
                         pageContent = pageContent + '  <td>';
                         pageContent = pageContent + '      <button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>';
                         pageContent = pageContent + '      <button type="button" class="btn btn-primary btn-xs" onclick=editTeacherById('+teacher.id+','+pageno+')><i class=" glyphicon glyphicon-pencil"></i></button>';
-                        pageContent = pageContent + '	  <button type="button" class="btn btn-danger btn-xs" onclick=deleteTeacherById('+teacher.id+',\''+teacher.tea_name+'\')><i class=" glyphicon glyphicon-remove"></i></button>';
+                        pageContent = pageContent + '	  <button type="button" class="btn btn-danger btn-xs" onclick=deleteTeacher('+teacher.id+',\''+teacher.tea_name+'\')><i class=" glyphicon glyphicon-remove"></i></button>';
                         pageContent = pageContent + '  </td>';
                         pageContent = pageContent + '</tr>';
                     });
@@ -214,17 +214,17 @@
     }
 
     //根据ID删除老师
-    function deleteTeacherById(id,tea_name){
+    function deleteTeacher(id,tea_name){
         layer.confirm("是否要删除"+tea_name+",请选择？",  {icon: 3, title:'提示'}, function(cindex){
             $.ajax({
                 type  : "POST",
-                url   : "${APP_PATH}/teacher/deleteTeacherById.do",
+                url   : "${APP_PATH}/teacher/deleteTeacher.do",
                 data  : {
                     id  :  id
                 },
                 success  : function(result){
                     if(result.success){
-                        layer.msg("删除"+eb_name+"成功", {time:1000, icon:5, shift:6});
+                        layer.msg("删除"+tea_name+"成功", {time:1000, icon:4, shift:6});
                         pageQuery(1);
                     }else{
                         layer.msg("用户删除失败", {time:1000, icon:5, shift:6});

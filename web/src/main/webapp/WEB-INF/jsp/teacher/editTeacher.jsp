@@ -66,7 +66,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师生日</label>
-                            <input type="text" class="form-control" id="tea_brithday" value="${teacher.tea_brithday}">
+                            <input type="date" class="form-control" id="tea_brithday" value="${teacher.tea_brithday}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">教师电话</label>
@@ -139,7 +139,8 @@
                 tea_brithday : $("#tea_brithday").val(),
                 tea_phone :$("#tea_phone").val(),
                 cou_id : $("#cou_id").val(),
-                cla_id : $("#cla_id").val()
+                cla_id : $("#cla_id").val(),
+                id  : "${param.id}"
             },
             beforeSend : function(){
                 loadingIndex = layer.msg('处理中,请稍后', {icon: 16});

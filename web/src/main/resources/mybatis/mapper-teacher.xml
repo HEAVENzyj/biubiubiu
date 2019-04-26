@@ -14,11 +14,17 @@
     		(#{tea_number},#{tea_name},#{tea_sex},#{tea_address},#{tea_brithday},#{tea_phone},#{sch_id},#{cou_id},#{cla_id},#{tea_createTime})
     </insert>
 
+    <!-- 根据ID删除教师信息 -->
+    <delete id="deleteTeacher">
+    	delete from t_teacher where id = #{id}
+    </delete>
+
     <!--修改教师信息-->
     <update id="updateTeacher">
     	update
     		t_teacher
-    		set tea_number = #{tea_number},
+    		set
+            tea_number = #{tea_number},
     		tea_name = #{tea_name},
             tea_sex = #{tea_sex},
             tea_address = #{tea_address},
@@ -32,13 +38,18 @@
     </update>
 
     <!-- 查询所有老师信息 -->
-  <select id="selectLikeTeacher" resultType="teacher">
+    <select id="likeSelectTeachers" resultType="teacher">
+		select * from t_teacher
+	</select>
+
+    <!--查询符合条件的老师-->
+    <select id="selectLikeTeacher" resultType="teacher">
         select
         *
         from t_teacher
         <where>
             <if test="queryText != null">
-                and tea_name like ('%', #{queryText}, '%')
+                and tea_name like concat('%', #{queryText}, '%')
             </if>
             <if test="sch_id != 0">
                 and sch_id = #{sch_id}
@@ -62,8 +73,6 @@
             </if>
         </where>
     </select>
-
-
 
 
      <!--根据id查询老师信息-->
