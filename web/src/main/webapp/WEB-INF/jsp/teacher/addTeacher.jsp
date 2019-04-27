@@ -178,7 +178,7 @@
             })
             return;
         }*/
-       alert($("#tea_brithday").val());
+       /*alert($("#tea_brithday").val());*/
         var loadingIndex = -1;
         $.ajax({
             type  : "POST",
@@ -201,9 +201,10 @@
             },
             success : function(result){
                 if(result.success){
-                    window.location.href = "${APP_PATH}/teacher/index.htm";
+                    layer.alert("教师信息添加成功！", {icon:6, time:2000, shift:6});
+                    setTimeout("window.location.href = \"${APP_PATH}/teacher/index.htm\";",2000);
                 }else{
-                    layer.msg("教师信息新增失败！", {time:1000, icon:5, shift:6});
+                    layer.msg("教师信息新增失败！", {icon:5, time:2000, shift:6});
                 }
             }
         })

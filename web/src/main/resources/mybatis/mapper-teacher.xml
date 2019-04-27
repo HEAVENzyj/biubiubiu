@@ -30,7 +30,6 @@
             tea_address = #{tea_address},
             tea_brithday = #{tea_brithday},
             tea_phone = #{tea_phone},
-            sch_id = #{sch_id},
             cou_id = #{cou_id},
             cla_id = #{cla_id},
             tea_createTime = #{tea_createTime}

@@ -149,7 +149,7 @@
         var loadingIndex = -1;
         var jsonData = {
             pageno : pageno,
-            pagesize :5,
+            pagesize :10,
             sch_id : "${loginUser.sch_id}"
         }
         jsonData["queryText"] = $("#queryText").val();

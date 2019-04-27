@@ -148,7 +148,8 @@
             success : function(result){
                 if(result.success){
                     layer.close(loadingIndex);
-                    layer.msg("教师信息修改成功", {time:1000, icon:5, shift:6},function(){
+                    layer.msg("教师信息修改成功", {time:1000, icon:6, shift:6},function(){
+                        setTimeout("",2000);
                         window.location.href = "${APP_PATH}/teacher/index.htm?pageno="+${param.pageno};
                     });
                 }else{
