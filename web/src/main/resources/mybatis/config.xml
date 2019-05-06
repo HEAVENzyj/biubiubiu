@@ -4,10 +4,12 @@
     <typeAliases>
        <typeAlias type="com.wheducation.bean.User" alias="user"/>
        <typeAlias type="com.wheducation.bean.Edubureau" alias="edubureau"/>
-        <typeAlias type="com.wheducation.bean.Teacher" alias="teacher"/>
+       <typeAlias type="com.wheducation.bean.Teacher" alias="teacher"/>
+       <typeAlias type="com.wheducation.bean.Inform" alias="inform"/>
        <typeAlias type="com.wheducation.bean.School" alias="school"/>
        <typeAlias type="com.wheducation.bean.Role" alias="role"/>
        <typeAlias type="com.wheducation.bean.Course" alias="course"/>
        <typeAlias type="com.wheducation.bean.Clazz" alias="clazz"/>
+       <typeAlias type="com.wheducation.bean.Student" alias="student"/>
     </typeAliases>
 </configuration>

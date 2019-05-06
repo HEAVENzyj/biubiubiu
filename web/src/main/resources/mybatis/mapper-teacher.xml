@@ -31,8 +31,7 @@
             tea_brithday = #{tea_brithday},
             tea_phone = #{tea_phone},
             cou_id = #{cou_id},
-            cla_id = #{cla_id},
-            tea_createTime = #{tea_createTime}
+            cla_id = #{cla_id}
     		where id = #{id}
     </update>
 

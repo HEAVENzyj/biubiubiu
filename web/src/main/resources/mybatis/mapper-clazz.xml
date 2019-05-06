@@ -5,6 +5,10 @@
 
 <mapper namespace="com.wheducation.dao.ClazzDao">
 
+	<select id="queryClazzlist" resultType="clazz">
+		select * from t_clazz where sch_id = #{sch_id}
+	</select>
+
 
     
     <!-- 分页查询班级信息 -->

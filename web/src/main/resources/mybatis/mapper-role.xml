@@ -14,7 +14,7 @@
     		from t_role
     		<where>
     			<if test="queryText != null">
-    				and role_name like concat('%', #{queryText},'%')
+    				and role_name like concat('%', #{queryText}, '%')
     			</if>
     		</where>
     	order by role_createtime 

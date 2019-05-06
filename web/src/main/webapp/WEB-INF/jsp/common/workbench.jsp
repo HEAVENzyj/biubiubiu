@@ -30,7 +30,7 @@
 								<a href="*"></i>组织结构</a> 
 							</li>
 							<li style="height:30px;">
-								<a href="*"></i>学校通知</a> 
+								<a href="${APP_PATH}/inform/index.htm"></i>学校通知</a>
 							</li>
 							<li style="height:30px;">
 								<a href="*"></i>校园风采</a> 
@@ -72,7 +72,7 @@
 						<span>学生管理<span class="badge" style="float:right">3</span></span> 
 						<ul style="margin-top:10px;display:none;">
 							<li style="height:30px;">
-								<a href="">学生信息管理</a> 
+								<a href="${APP_PATH}/student/index.htm">学生信息管理</a> 
 							</li>
 							<li style="height:30px;">
 								<a href="">请假管理</a> 
