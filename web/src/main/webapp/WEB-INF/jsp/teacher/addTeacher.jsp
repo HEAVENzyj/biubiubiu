@@ -33,7 +33,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <ol class="breadcrumb">
                 <li><a href="${APP_PATH}/main/htm">首页</a></li>
-                <li><a href="${APP_PATH}/user/index.htm">教师信息列表</a></li>
+                <li><a href="${APP_PATH}/teacher/index.htm">教师信息列表</a></li>
                 <li class="active">教师信息新增</li>
             </ol>
             <div class="panel panel-default">
@@ -204,7 +204,7 @@
                     layer.alert("教师信息添加成功！", {icon:6, time:2000, shift:6});
                     setTimeout("window.location.href = \"${APP_PATH}/teacher/index.htm\";",2000);
                 }else{
-                    layer.msg("教师信息新增失败！", {icon:5, time:2000, shift:6});
+                    layer.msg("教师信息新增失败！请联系管理员。", {icon:5, time:2000, shift:6});
                 }
             }
         })

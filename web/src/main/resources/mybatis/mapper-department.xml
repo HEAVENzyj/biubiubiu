@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wheducation.dao.DepartmentDao">
+
+    <!-- 新增教师信息 -->
+    <!--<insert id="insertTeacher">
+    	insert into
+    		t_teacher
+    		(tea_number,tea_name,tea_sex,tea_address,tea_brithday,tea_phone,sch_id,cou_id,cla_id,tea_createTime)
+    		value
+    		(#{tea_number},#{tea_name},#{tea_sex},#{tea_address},#{tea_brithday},#{tea_phone},#{sch_id},#{cou_id},#{cla_id},#{tea_createTime})
+    </insert>
+
+    &lt;!&ndash; 根据ID删除教师信息 &ndash;&gt;
+    <delete id="deleteTeacher">
+    	delete from t_teacher where id = #{id}
+    </delete>
+
+    &lt;!&ndash;修改教师信息&ndash;&gt;
+    <update id="updateTeacher">
+    	update
+    		t_teacher
+    		set
+            tea_number = #{tea_number},
+    		tea_name = #{tea_name},
+            tea_sex = #{tea_sex},
+            tea_address = #{tea_address},
+            tea_brithday = #{tea_brithday},
+            tea_phone = #{tea_phone},
+            cou_id = #{cou_id},
+            cla_id = #{cla_id}
+    		where id = #{id}
+    </update>
+
+    &lt;!&ndash; 查询所有老师信息 &ndash;&gt;
+    <select id="likeSelectTeachers" resultType="teacher">
+		select * from t_teacher
+	</select>
+
+    &lt;!&ndash;查询符合条件的老师&ndash;&gt;
+    <select id="selectLikeTeacher" resultType="teacher">
+        select
+        *
+        from t_teacher
+        <where>
+            <if test="queryText != null">
+                and tea_name like concat('%', #{queryText}, '%')
+            </if>
+            <if test="sch_id != 0">
+                and sch_id = #{sch_id}
+            </if>
+        </where>
+        order by tea_createtime desc
+        limit #{start},#{size}
+    </select>
+
+    &lt;!&ndash; 查询符合条件的老师总数 &ndash;&gt;
+    <select id="showTeacherCount" resultType="int">
+        select
+        count(*)
+        from t_teacher
+        <where>
+            <if test="queryText != null">
+                and tea_name like concat('%', #{queryText}, '%')
+            </if>
+            <if test="sch_id != 0">
+                and sch_id = #{sch_id}
+            </if>
+        </where>
+    </select>
+
+
+     &lt;!&ndash;根据id查询老师信息&ndash;&gt;
+    <select id="indexTeacherById" resultType="teacher">
+		select
+			*
+			from
+			t_teacher
+			where id = #{id}
+	</select>-->
+    <!--查询所有部门-->
+    <!--<select id="selectDepartments" resultType="department">
+		select * from t_department
+	</select>-->
+
+    <!--查询符合条件的部门-->
+    <select id="selectDepartments" resultType="department">
+        select
+        *
+        from t_department
+        <where>
+            <if test="queryText != null">
+                and name like concat('%', #{queryText}, '%')
+            </if>
+        </where>
+    </select>
+
+    <!-- 新增部门信息 -->
+    <insert id="insertDepartment">
+    	insert into
+    		t_department
+    		(id,pid,name,remarks)
+    		value
+    		(#{id},#{pid},#{name},#{remarks})
+    </insert>
+
+    <!--查询符合条件的部门-->
+    <select id="selectidbyName" resultType="pname">
+        select
+        *
+        from t_department
+        <where>
+            and name like concat('%', pname, '%')
+        </where>
+    </select>
+</mapper>
+
+
+

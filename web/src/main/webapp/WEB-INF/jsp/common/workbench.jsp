@@ -103,8 +103,11 @@
 								<a href="${APP_PATH}/role/index.htm">角色管理</a> 
 							</li>
 							<li style="height:30px;">
-								<a href="user.html">权限管理</a> 
-							</li>								
+								<a href="${APP_PATH}/department/index.htm">部门管理</a>
+							</li>
+							<li style="height:30px;">
+								<a href="${APP_PATH}/zTree/demo/cn/index.htm">权限管理</a>
+							</li>
 						</ul>
-					</li>									
+					</li>
 					</ul>

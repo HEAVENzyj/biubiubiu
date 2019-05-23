@@ -6,6 +6,7 @@
        <typeAlias type="com.wheducation.bean.Edubureau" alias="edubureau"/>
        <typeAlias type="com.wheducation.bean.Teacher" alias="teacher"/>
        <typeAlias type="com.wheducation.bean.Inform" alias="inform"/>
+       <typeAlias type="com.wheducation.bean.Department" alias="department"/>
        <typeAlias type="com.wheducation.bean.School" alias="school"/>
        <typeAlias type="com.wheducation.bean.Role" alias="role"/>
        <typeAlias type="com.wheducation.bean.Course" alias="course"/>
